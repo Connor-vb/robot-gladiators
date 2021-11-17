@@ -1,14 +1,34 @@
+// Game States
+// "WIN" - Player robot has defeated all enemy-robots
+//    * Fight all enemy-robots
+//    * Defeat each enemy-robot
+// "LOSE" - Player robot's health is zero or less
+
+
+
+
 var playerName = window.prompt("What is your robot's name?");
 var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney = 10;
 // You can also log multiple values at once like this
 // console.log(playerName, playerAttack, playerHealth);
-var enemyName = "Roborto";
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
+// console.log(enemyNames);
+// console.log(enemyNames[0]);
+// console.log(enemyNames[1]);
+// console.log(enemyNames[2]);
+// console.log(enemyNames.length)
+// for(var i = 0; i < enemyNames.length; i++) {
+//   console.log(enemyNames[i]);
+//   console.log(i);
+//   console.log(enemyNames[i] + " is at " + i + " index");
+// }
+// console.log(enemyNames[enemyNames.length - 1]); 'to see the last enemy in the string'
 var enemyHealth = 50;
 var enemyAttack = 12;
 
-var fight = function() {
+var fight = function(enemyName) {
     // Alert players that they are starting the round
     window.alert("Welcome to Robot Gladiators!");
     var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
@@ -57,54 +77,6 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
 }
 };
   // execute function
-  fight();
-  
-
-
-
-
-
-
-
-
-
-
-
-// This creates a function called fight
-
-// function fight() {
-//     window.alert("The fight has begun!");
-// }
-// // fight();
-// var playerName = window.prompt("What is your Robot's name?");
-// // Note the lack of quotation marks around playerName
-// console.log(playerName);
-// console.log("This logs a string, good for leaving yourself a message");
-// // this will do math and log 20
-// console.log(10 + 10);
-// // what is this?
-// console.log("Our robot's name is " + playerName);
-
-// // TYPES OF VAR
-// // This is a String data type; it must be wrapped in double quotes (" ") or single quotes (' ').
-// var stringDataType = "This is a string, which is a fancy way to say text";
-
-// // This is a Number data type; it can be an integer (whole number) or have decimals (floated numbers).
-// var numberIntegerDataType = 10;
-// var numberFloatDataType = 10.4;
-
-// // This is a Boolean data type, which can only be given a value of true or false.
-// var booleanDataType = true;
-
-
-// // TYPES OF CONSOLE LOGS
-// var playerName = "Tony the Robot";
-
-// // Tony the Robot is ready for battle!
-// console.log("Tony the Robot" + " is ready for battle!");
-
-// // "Tony the Robot is ready for battle!"
-// console.log(playerName + " is ready for battle!");
-
-// // "Your robot, Tony the Robot, has won!
-// console.log("Your robot, " + playerName + ", has won!");
+  for(var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+  }
