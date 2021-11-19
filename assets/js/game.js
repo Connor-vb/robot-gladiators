@@ -213,9 +213,3 @@ var enemyInfo = [
 
 // RUN GAME
 startGame();
-
-
- // if player choses to fight, then fight
-//     if (promptFight === "fight" || promptFight === "FIGHT") {
-           
-// };
